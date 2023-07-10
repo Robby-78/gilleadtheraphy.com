@@ -38,10 +38,15 @@ url_list = [
 "https://gileadtherapy.com/blog/page/3/importance-of-sleep-for-well-being/",
 "https://gileadtherapy.com/blog/page/4/strategies-for-managing-stress/",
 "https://gileadtherapy.com/blog/page/4/nutrition-and-mental-health/",
+"https://istories.co.ke/admin/blog/posts/edit/22",
+"https://istories.co.ke/admin/blog/posts/edit/21",
+"https://istories.co.ke/admin/blog/posts/edit/20",
+"https://istories.co.ke/admin/blog/posts/edit/19",
+"https://istories.co.ke/admin/blog/posts/edit/17",
 ] 
 
 # Read the list of proxies from the JSON file
-proxy_url = 'https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt'
+proxy_url = 'https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt'
 try:
     response = requests.get(proxy_url)
     proxy_lines = response.text.split('\n')
