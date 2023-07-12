@@ -45,33 +45,15 @@ url_list = [
 "https://gileadtherapy.com/9-causes-of-heartburn-in-the-morning/",
 "https://gileadtherapy.com/9-causes-of-heartburn-in-the-morning/",
 "https://gileadtherapy.com/category/general-health/",
-"https://gileadtherapy.com/author/opindebarrack15gmail-com/",
-"https://gileadtherapy.com/9-causes-of-heartburn-in-the-morning/",
-"https://gileadtherapy.com/what-causes-low-breast-milk-supply/",
-"https://gileadtherapy.com/what-causes-low-breast-milk-supply/",
-"https://gileadtherapy.com/category/general-health/",
-"https://gileadtherapy.com/author/opindebarrack15gmail-com/",
-"https://gileadtherapy.com/what-causes-low-breast-milk-supply/",
-"https://gileadtherapy.com/what-triggers-migraines-12-science-backed-causes/",
-"https://gileadtherapy.com/what-triggers-migraines-12-science-backed-causes/",
-"https://gileadtherapy.com/category/general-health/",
-"https://gileadtherapy.com/author/opindebarrack15gmail-com/",
-"https://gileadtherapy.com/what-triggers-migraines-12-science-backed-causes/",
-"https://gileadtherapy.com/17-home-remedies-for-fungal-infection/",
-"https://gileadtherapy.com/17-home-remedies-for-fungal-infection/",
-"https://gileadtherapy.com/17-home-remedies-for-fungal-infection/#comments",
-"https://gileadtherapy.com/category/general-health/",
-"https://gileadtherapy.com/author/opindebarrack15gmail-com/",
-"https://gileadtherapy.com/17-home-remedies-for-fungal-infection/",
-"https://gileadtherapy.com/12-home-remedies-for-gout-pain/",
 ]
 
 # Read the list of proxies from the CSV file
 # df = pd.read_csv("https://github.com/jetkai/proxy-list/raw/main/online-proxies/csv/proxies.csv")
 # df =df.iloc[1200:]
 proxies = [
-    "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-    "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt"
+    "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/proxy.txt",
+    "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+    "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt"
 ]
 proxies_df = pd.DataFrame({'http': []})
 
@@ -118,7 +100,7 @@ for pro in df["http"]:
     # Configure Chrome to use the proxy
     chromedriver = '/home/robinson/Desktop/proxyValidator/gilleadtheraphy.com/chromedriver'
     chrome_options.add_argument(f'--proxy-server={pro}')
-    # chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--headless')
 # Create the Chrome driver using options
     chrome = webdriver.Chrome(options=chrome_options)
     # Randomize the order of URLs
@@ -126,17 +108,10 @@ for pro in df["http"]:
 
     # Visit each website only once
     for url in url_list:
-            try:
-                # Set a longer timeout value for execute_script()
-                chrome.set_script_timeout(30)  # Set the timeout value in seconds
-                chrome.execute_script("window.open('{}', '_blank')".format(url))
-                visits_counter += 1
-                time.sleep(random.uniform(5, 15))  # Random delay between 5 to 15 seconds
-                print("Visited {} pages using proxies".format(visits_counter))
-            except Exception as e:
-                if "Timeout" in str(e):
-                    print("Timeout occurred while executing script for URL:", url)
-                else:
-                    print("Error occurred while executing script for URL:", url, "\n", str(e))
+        chrome.set_script_timeout(30)  # Set the timeout value in seconds
+        chrome.execute_script("window.open('{}', '_blank')".format(url))
+        visits_counter += 1
+        time.sleep(random.uniform(5, 15))  # Random delay between 5 to 15 seconds
+        print("Visited {} pages using proxies".format(visits_counter))
 
     chrome.quit()
