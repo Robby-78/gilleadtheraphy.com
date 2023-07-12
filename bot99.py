@@ -1,3 +1,4 @@
+import os
 import time
 import random
 import pandas as pd
@@ -69,7 +70,7 @@ url_list = [
 # df = pd.read_csv("https://github.com/jetkai/proxy-list/raw/main/online-proxies/csv/proxies.csv")
 # df =df.iloc[1200:]
 proxies = [
-    "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt"
+    "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt"
 ]
 proxies_df = pd.DataFrame({'http': []})
 
@@ -93,7 +94,7 @@ user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0",
     # Add more user agents here
 ]
-chrome_options.add_argument(f"--user-agent={random.choice(user_agents)}")
+os.environ["webdriver.chrome.driver"] = "/home/robinson/Desktop/proxyValidator/gilleadtheraphy.com/chromedriver"
 
 # Search engine referrer URLs
 referrer_urls = [
@@ -108,17 +109,17 @@ chrome_options.add_argument(f"--referer={random.choice(referrer_urls)}")
 for pro in df["http"]:
     # Check the validity of the proxy
     try:
-        requests.get("https://www.google.com/", proxies={"https": pro}, timeout=3)
+        requests.get("https://gileadtherapy.com/", proxies={"https": pro}, timeout=3)
     except:
         print(f"Skipping proxy {pro} (not working)")
         continue
 
     # Configure Chrome to use the proxy
-    chromedriver = '/chromedriver'
+    chromedriver = '/home/robinson/Desktop/proxyValidator/gilleadtheraphy.com/chromedriver'
     chrome_options.add_argument(f'--proxy-server={pro}')
     # chrome_options.add_argument('--headless')
-    chrome = webdriver.Chrome(chromedriver, options=chrome_options)
-
+# Create the Chrome driver using options
+    chrome = webdriver.Chrome(options=chrome_options)
     # Randomize the order of URLs
     random.shuffle(url_list)
 
@@ -126,7 +127,7 @@ for pro in df["http"]:
     for url in url_list:
         chrome.execute_script("window.open('{}', '_blank')".format(url))
         visits_counter += 1
-        time.sleep(random.uniform(5, 15))  # Random delay between 5 to 15 seconds
+        time.sleep(random.uniform(2, 35))  # Random delay between 5 to 15 seconds
         print("Visited {} pages using proxies".format(visits_counter))
-
+    time.sleep(400)
     chrome.quit()
