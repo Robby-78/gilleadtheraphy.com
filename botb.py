@@ -156,7 +156,7 @@ url_list = [
 # df = pd.read_csv("https://github.com/jetkai/proxy-list/raw/main/online-proxies/csv/proxies.csv")
 # df =df.iloc[1200:]
 proxies = [
-    "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"
+    "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt"
 ]
 proxies_df = pd.DataFrame({'http': []})
 

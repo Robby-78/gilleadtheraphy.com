@@ -156,7 +156,7 @@ url_list = [
 # df = pd.read_csv("https://github.com/jetkai/proxy-list/raw/main/online-proxies/csv/proxies.csv")
 # df =df.iloc[1200:]
 proxies = [
-    "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"
+    "https://raw.githubusercontent.com/Bardiafa/Proxy-Leecher/main/proxies.txt"
 ]
 proxies_df = pd.DataFrame({'http': []})
 
@@ -209,11 +209,12 @@ for pro in df["http"]:
     # Randomize the order of URLs
     random.shuffle(url_list)
 
-    # Visit each website only once
+       # Visit each website only once
     for url in url_list:
         chrome.execute_script("window.open('{}', '_blank')".format(url))
         visits_counter += 1
         time.sleep(random.uniform(5, 15))  # Random delay between 5 to 15 seconds
         print("Visited {} pages using proxies".format(visits_counter))
+
 
     chrome.quit()
