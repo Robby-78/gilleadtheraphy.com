@@ -5,7 +5,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 visits_counter = 0
-
 url_list = [
     'https://iconect.co.ke/modern-tanks-from-germany-and-uk-to-ukraine-against-russian-invasion',
     'https://iconect.co.ke/israeli-pm-delays-controversial-judicial-overhaul-amid-protests-and-strikes',
