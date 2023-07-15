@@ -136,11 +136,10 @@ url_list = [
 ]
 
 proxies = ["https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-    'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies.txt',
-    'https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt',
-    'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
-    
-]
+           "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies.txt",
+           "https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt",
+           "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt"
+          ]
 
 proxies_df = pd.DataFrame({'http': []})
 
@@ -157,7 +156,8 @@ df = proxies_df
 # Configure Chrome to open URLs in new tabs
 chrome_options = Options()
 chrome_options.add_argument("--new-tab")
-chrome_options.add_argument('--headless')  # Enable headless mode
+#chrome_options.add_argument('--headless')  # Enable headless mode
+
 # Set the referrer header for requests
 headers = {
     'Referer': 'https://iconect.co.ke/'
@@ -179,7 +179,13 @@ for pro in df["http"]:
     with webdriver.Chrome(options=chrome_options) as chrome:
         # Visit each website only once
         for url in url_list:
-            chrome.execute_script("window.open('{}', '_blank')".format(url))
+            # Open a new window
+            chrome.execute_script("window.open()")
+
+            # Switch to the newly opened window
+            chrome.switch_to.window(chrome.window_handles[-1])
+
+            chrome.get(url)
             visits_counter += 1
             time.sleep(5)
             print("Visited {} pages using proxies".format(visits_counter))

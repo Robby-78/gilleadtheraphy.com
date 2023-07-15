@@ -7,29 +7,136 @@ from selenium.webdriver.chrome.options import Options
 visits_counter = 0
 
 url_list = [
-    'https://iconect.co.ke/modern-tanks-from-germany-and-uk-to-ukraine-against-russian-invasion',
-    'https://iconect.co.ke/israeli-pm-delays-controversial-judicial-overhaul-amid-protests-and-strikes',
-    'https://iconect.co.ke/373',
-    'https://iconect.co.ke/how-we-can-reduce-global-warming',
-    'https://iconect.co.ke/russia-test-fires-anti-ship-missiles-sea-of-japan',
-    'https://iconect.co.ke/exploring-the-art-and-science-of-astrology-self-discovery-skepticism-and-personal-growth',
-    'https://iconect.co.ke/amnesty-international-report-exposes-double-standards-in-human-rights-amidst-ukraine-invasion',
-    'https://iconect.co.ke/coca-cola-a-legacy-of-quality-innovation-and-sustainability',
-    'https://iconect.co.ke/oscars-over-the-last-decade-celebrating-the-best-in-film',
-    'https://iconect.co.ke/the-rise-of-electric-cars-a-game-changer-in-the-auto-industry',
-    'https://iconect.co.ke/african-spirituality-nurturing-identity-and-culture-before-christianity',
-    'https://iconect.co.ke/the-rise-of-electric-cars-a-game-changer-in-the-auto-industry',
-    'https://iconect.co.ke/maat-the-ancient-egyptian-concept-of-balance-justice-and-truth',
-    'https://iconect.co.ke/working-in-germany-a-guide-to-employment-opportunities-culture-and-requirements',
-    'https://iconect.co.ke/the-legacy-of-ancient-grinders-from-manual-labor-to-cultural-heritage',
+   "https://ipapi.co/{ip}/country",
+ "https://iconect.co.ke/india-surpass-china-population-growth",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/Central American Migrants Demand Justice and Better Treatment in Mexico as They March Towards Mexico City",
+"https://iconect.co.ke/Central American Migrants Demand Justice and Better Treatment in Mexico as They March Towards Mexico City",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/from-snowden-to-teixeira-the-never-ending-battle-against-national-security-threats-posed-by-classified-information-leaks",
+"https://iconect.co.ke/from-snowden-to-teixeira-the-never-ending-battle-against-national-security-threats-posed-by-classified-information-leaks",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/kenyan-news",
+"https://iconect.co.ke/idd-ul-fitr-declared-national-holiday-in-kenya-for-muslims",
+"https://iconect.co.ke/idd-ul-fitr-declared-national-holiday-in-kenya-for-muslims",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/nairobi-diaries-a-look-into-the-lives-of-young-urban-kenyans-on-reality-tv",
+"https://iconect.co.ke/nairobi-diaries-a-look-into-the-lives-of-young-urban-kenyans-on-reality-tv",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/tahmeed-unveils-new-scania-f360-buses-for-nairobi-dar-es-salaam-and-nairobi-malindi-routes-enhancing-safety-comfort-and-sustainability-in-east-african-transportation",
+"https://iconect.co.ke/tahmeed-unveils-new-scania-f360-buses-for-nairobi-dar-es-salaam-and-nairobi-malindi-routes-enhancing-safety-comfort-and-sustainability-in-east-african-transportation",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/turkana-county-launches-fcdc-policy-and-act-2022-to-enhance-peacebuilding-efforts",
+"https://iconect.co.ke/turkana-county-launches-fcdc-policy-and-act-2022-to-enhance-peacebuilding-efforts",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/tragedy-in-bomet-father-kills-two-sons-in-a-fit-of-rage",
+"https://iconect.co.ke/tragedy-in-bomet-father-kills-two-sons-in-a-fit-of-rage",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/african-news",
+"https://iconect.co.ke/deadly-cobra-in-south-african-airways-cockpit-forces-emergency-landing",
+"https://iconect.co.ke/deadly-cobra-in-south-african-airways-cockpit-forces-emergency-landing",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/zimbabwe-democratic-space-shrinking-human-rights-concerns",
+"https://iconect.co.ke/zimbabwe-democratic-space-shrinking-human-rights-concerns",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/afreximbank-and-kenya-collaborate-to-boost-industrial-renaissance-and-trade-development",
+"https://iconect.co.ke/afreximbank-and-kenya-collaborate-to-boost-industrial-renaissance-and-trade-development",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/lesotho-mp-demands-huge-parts-of-south-africa",
+"https://iconect.co.ke/lesotho-mp-demands-huge-parts-of-south-africa",
+"https://iconect.co.ke/profile/ferrary-kirui",
+"https://iconect.co.ke/angelique-kidjo-wins-polar-music-prize",
+"https://iconect.co.ke/angelique-kidjo-wins-polar-music-prize",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/sports-news",
+"https://iconect.co.ke/inter-milan-vs-ac-milan-champions-league-semifinal-preview",
+"https://iconect.co.ke/inter-milan-vs-ac-milan-champions-league-semifinal-preview",
+"https://iconect.co.ke/profile/admin",
+"https://iconect.co.ke/why-always-me-the-story-behind-mario-balotellis-iconic-catchphrase",
+"https://iconect.co.ke/why-always-me-the-story-behind-mario-balotellis-iconic-catchphrase",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/the-thrill-of-formula-one-a-look-into-the-worlds-most-advanced-motorsport",
+"https://iconect.co.ke/the-thrill-of-formula-one-a-look-into-the-worlds-most-advanced-motorsport",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/clippers-edge-suns-in-game-1-of-nba-playoffs-paul-george-leads-with-34-points",
+"https://iconect.co.ke/clippers-edge-suns-in-game-1-of-nba-playoffs-paul-george-leads-with-34-points",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/ai-in-football-from-player-performance-analysis-to-club-management-is-it-ready",
+"https://iconect.co.ke/ai-in-football-from-player-performance-analysis-to-club-management-is-it-ready",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/politics",
+"https://iconect.co.ke/the-ongoing-conflict-in-ethiopias-tigray-region-challenges-and-implications-for-africa",
+"https://iconect.co.ke/the-ongoing-conflict-in-ethiopias-tigray-region-challenges-and-implications-for-africa",
+"https://iconect.co.ke/profile/ian",
+"https://iconect.co.ke/east-africa-spectre-limited-attacked-security-concerns",
+"https://iconect.co.ke/east-africa-spectre-limited-attacked-security-concerns",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/transport-paralysed-in-migori",
+"https://iconect.co.ke/transport-paralysed-in-migori",
+"https://iconect.co.ke/profile/ferrary-kirui",
+"https://iconect.co.ke/how-kenyan-demonstrations-raises-costs-of-living",
+"https://iconect.co.ke/how-kenyan-demonstrations-raises-costs-of-living",
+"https://iconect.co.ke/profile/Rono",
+"https://iconect.co.ke/opposition-mps-criticize-government-over-security-detail-withdrawal",
+"https://iconect.co.ke/opposition-mps-criticize-government-over-security-detail-withdrawal",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/tech",
+"https://iconect.co.ke/stoichiometric-air-fuel-ratio-basic-engineering",
+"https://iconect.co.ke/stoichiometric-air-fuel-ratio-basic-engineering",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/weigh-feeders-material-handling-with-its-innovation",
+"https://iconect.co.ke/weigh-feeders-material-handling-with-its-innovation",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/the-theory-of-twisting-torsion",
+"https://iconect.co.ke/the-theory-of-twisting-torsion",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/thermodynamic-cycles",
+"https://iconect.co.ke/thermodynamic-cycles",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/maximizing-performance-and-energy-efficiency-in-boiler-systems",
+"https://iconect.co.ke/maximizing-performance-and-energy-efficiency-in-boiler-systems",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/article",
+"https://iconect.co.ke/components-of-sugarcane-factory-mon",
+"https://iconect.co.ke/components-of-sugarcane-factory-mon",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/the-power-of-choice-understanding-the-consequences-of-our-decisions",
+"https://iconect.co.ke/the-power-of-choice-understanding-the-consequences-of-our-decisions",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/ezekiel-2517-understanding-the-power-and-purpose-of-gods-vengeance",
+"https://iconect.co.ke/ezekiel-2517-understanding-the-power-and-purpose-of-gods-vengeance",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/legacy-communications-preserving-history-memories",
+"https://iconect.co.ke/legacy-communications-preserving-history-memories",
+"https://iconect.co.ke/profile/Patricky",
+"https://iconect.co.ke/time-study-and-work-measurement-standard-times",
+"https://iconect.co.ke/time-study-and-work-measurement-standard-times",
+"https://iconect.co.ke/profile/agsey",
+"https://iconect.co.ke/business",
+"https://iconect.co.ke/the-remarkable-journey-of-john-d-rockefeller-and-the-legacy-of-standard-oil",
+"https://iconect.co.ke/the-remarkable-journey-of-john-d-rockefeller-and-the-legacy-of-standard-oil",
+"https://iconect.co.ke/profile/ferrary-kirui",
+"https://iconect.co.ke/the-tesla-model-s-redefining-performance-range-and-design-in-electric-cars",
+"https://iconect.co.ke/the-tesla-model-s-redefining-performance-range-and-design-in-electric-cars",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/china-offers-olive-branch-to-entrepreneurs-as-jack-ma-returns",
+"https://iconect.co.ke/china-offers-olive-branch-to-entrepreneurs-as-jack-ma-returns",
+"https://iconect.co.ke/profile/ferrary-kirui",
+"https://iconect.co.ke/amazon-from-online-bookstore-to-global-powerhouse-in-e-commerce-streaming-cloud-computing-and-ai",
+"https://iconect.co.ke/amazon-from-online-bookstore-to-global-powerhouse-in-e-commerce-streaming-cloud-computing-and-ai",
+"https://iconect.co.ke/profile/Ghost",
+"https://iconect.co.ke/former-treasury-official-warns-of-complete-economic-implosion-if-us-dollar-loses-global-reserve-currency-status",
+"https://iconect.co.ke/former-treasury-official-warns-of-complete-economic-implosion-if-us-dollar-loses-global-reserve-currency-status",
+"https://iconect.co.ke/profile/ferrary-kirui",
+
+
 ]
 
-proxies = [   'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
-    "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-    'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies.txt',
-    'https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt',
- 
-]
+proxies = [  "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
+           "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies.txt",
+           "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+           "https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt",
+          ]
 
 proxies_df = pd.DataFrame({'http': []})
 
@@ -46,31 +153,18 @@ df = proxies_df
 # Configure Chrome to open URLs in new tabs
 chrome_options = Options()
 chrome_options.add_argument("--new-tab")
-#chrome_options.add_argument('--headless')
+#chrome_options.add_argument('--headless')  # Enable headless mode
 
 # Set the referrer header for requests
 headers = {
     'Referer': 'https://iconect.co.ke/'
 }
 
-# Function to get the country of a proxy using IP geolocation
-def get_proxy_country(proxy):
-    try:
-        ip = proxy.split(':')[0]
-        response = requests.get(f'https://ipapi.co/{ip}/country/', headers=headers)
-        if response.status_code == 200:
-            return response.text
-    except:
-        pass
-    return 'Unknown'
-
 # Loop through each proxy in the list
 for pro in df["http"]:
     # Check the validity of the proxy
     try:
         requests.get("https://iconect.co.ke/", proxies={"https": pro}, timeout=3, headers=headers)
-        country = get_proxy_country(pro)
-        print(f"Proxy: {pro} - Country: {country}")
     except:
         print(f"Skipping proxy {pro} (not working)")
         continue
@@ -82,8 +176,14 @@ for pro in df["http"]:
     with webdriver.Chrome(options=chrome_options) as chrome:
         # Visit each website only once
         for url in url_list:
-            chrome.execute_script("window.open('{}', '_blank')".format(url))
+            # Open a new window
+            chrome.execute_script("window.open()")
+
+            # Switch to the newly opened window
+            chrome.switch_to.window(chrome.window_handles[-1])
+
+            chrome.get(url)
             visits_counter += 1
             time.sleep(5)
-            print("Visited {} pages using proxy {} ({})".format(visits_counter, pro, country))
+            print("Visited {} pages using proxies".format(visits_counter))
         time.sleep(100)
