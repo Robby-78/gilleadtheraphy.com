@@ -9,23 +9,21 @@ from selenium.webdriver.chrome.options import Options
 visits_counter = 0
 
 url_list = [
-"https://gileadtherapy.com/natural-remedies-for-hormonal-imbalance-in-females/#comments",
-"https://gileadtherapy.com/category/general-health/",
-"https://gileadtherapy.com/author/opindebarrack15gmail-com/",
-"https://gileadtherapy.com/natural-remedies-for-hormonal-imbalance-in-females/",
-"https://gileadtherapy.com/13-home-remedies-for-abscess/",
-"https://gileadtherapy.com/13-home-remedies-for-abscess/",
-"https://gileadtherapy.com/category/general-health/",
-"https://gileadtherapy.com/author/opindebarrack15gmail-com/",
-"https://gileadtherapy.com/13-home-remedies-for-abscess/",
-"https://gileadtherapy.com/best-heartburn-relief/",
-"https://gileadtherapy.com/best-heartburn-relief/",
-"https://gileadtherapy.com/category/general-health/",
-"https://gileadtherapy.com/author/opindebarrack15gmail-com/",
-"https://gileadtherapy.com/best-heartburn-relief/",
-"https://gileadtherapy.com/9-causes-of-heartburn-in-the-morning/",
-"https://gileadtherapy.com/9-causes-of-heartburn-in-the-morning/",
-"https://gileadtherapy.com/category/general-health/",
+'https://iconect.co.ke/modern-tanks-from-germany-and-uk-to-ukraine-against-russian-invasion',
+    'https://iconect.co.ke/israeli-pm-delays-controversial-judicial-overhaul-amid-protests-and-strikes',
+    'https://iconect.co.ke/373',
+    'https://iconect.co.ke/how-we-can-reduce-global-warming',
+    'https://iconect.co.ke/russia-test-fires-anti-ship-missiles-sea-of-japan',
+    'https://iconect.co.ke/exploring-the-art-and-science-of-astrology-self-discovery-skepticism-and-personal-growth',
+    'https://iconect.co.ke/amnesty-international-report-exposes-double-standards-in-human-rights-amidst-ukraine-invasion',
+    'https://iconect.co.ke/coca-cola-a-legacy-of-quality-innovation-and-sustainability',
+    'https://iconect.co.ke/oscars-over-the-last-decade-celebrating-the-best-in-film',
+    'https://iconect.co.ke/the-rise-of-electric-cars-a-game-changer-in-the-auto-industry',
+    'https://iconect.co.ke/african-spirituality-nurturing-identity-and-culture-before-christianity',
+    'https://iconect.co.ke/the-rise-of-electric-cars-a-game-changer-in-the-auto-industry',
+    'https://iconect.co.ke/maat-the-ancient-egyptian-concept-of-balance-justice-and-truth',
+    'https://iconect.co.ke/working-in-germany-a-guide-to-employment-opportunities-culture-and-requirements',
+    'https://iconect.co.ke/the-legacy-of-ancient-grinders-from-manual-labor-to-cultural-heritage',
 ]
 
 # Read the list of proxies from the CSV file
@@ -81,7 +79,7 @@ for pro in df["http"]:
     # Configure Chrome to use the proxy
     chromedriver = '/home/robinson/Desktop/proxyValidator/gilleadtheraphy.com/chromedriver'
     chrome_options.add_argument(f'--proxy-server={pro}')
-    chrome_options.add_argument('--headless')
+    #chrome_options.add_argument('--headless')
 # Create the Chrome driver using options
     chrome = webdriver.Chrome(options=chrome_options)
     # Randomize the order of URLs

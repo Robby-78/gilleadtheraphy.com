@@ -26,9 +26,10 @@ url_list = [
 
 proxies = [  
     'https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt',
-    'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
     "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
     'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies.txt',
+    'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
+    
 
 ]
 

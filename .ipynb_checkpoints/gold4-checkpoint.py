@@ -52,6 +52,6 @@ for pro in df["http"]:
         for url in url_list:
             chrome.execute_script("window.open('{}', '_blank')".format(url))
             visits_counter += 1
-            time.sleep(30)
+            time.sleep(50)
             print("Visited {} pages using proxies".format(visits_counter))
-        time.sleep(300)
+        time.sleep(900)
