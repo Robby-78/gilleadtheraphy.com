@@ -13,9 +13,7 @@ try:
     # Create a new Chrome WebDriver instance with options
     driver = webdriver.Chrome(executable_path=webdriver_path, options=chrome_options)
 
-    url = "https://gileadtherapy.com/",
-    "https://gileadtherapy.com/blog/",
-    ""
+    url = "https://iconect.co.ke"
 
     # Load the page
     driver.get(url)

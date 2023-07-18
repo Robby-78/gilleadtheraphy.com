@@ -619,12 +619,6 @@ url_list = [
 "https://iconect.co.ke/in-bosnia-the-past-is-disappearing-and-the-future-is-bleak",
 "https://iconect.co.ke/functions-of-every-key-keys-on-the-computer-keyboard-and-their-functions",
 "https://iconect.co.ke/functions-of-every-key-keys-on-the-computer-keyboard-and-their-functions",
-"https://facebook.com/iconectke",
-"https://twitter.com/iconect1",
-"https://www.youtube.com/channel/UC-6g1k5aOpAAmJm5ExJPTPA",
-"https://iconect.co.ke/rss-feeds",
-"https://iconect.co.ke/terms-conditions",
-"#",
 
 ]
 
